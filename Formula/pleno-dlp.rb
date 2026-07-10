@@ -5,21 +5,21 @@
 class PlenoDlp < Formula
   desc "Unified DLP scanner for secrets and PII across filesystem, git, stdin, and SaaS sources."
   homepage "https://plenoai.com/pleno-dlp/"
-  version "0.60.0"
+  version "0.61.0"
   license "AGPL-3.0-only"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/plenoai/pleno-dlp/releases/download/v0.60.0/pleno-dlp_darwin_amd64.tar.gz"
-      sha256 "4bb3ae76223f5b2324258def404bcb5c48ab2f92aae35c31c09ed5eb89479732"
+      url "https://github.com/plenoai/pleno-dlp/releases/download/v0.61.0/pleno-dlp_darwin_amd64.tar.gz"
+      sha256 "bb5f2923bd8442b03b0a30cb7348ff9e969485529076ab40b0fdcccbc4a27fa2"
 
       define_method(:install) do
         bin.install "pleno-dlp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/plenoai/pleno-dlp/releases/download/v0.60.0/pleno-dlp_darwin_arm64.tar.gz"
-      sha256 "7fa9a8416b21944cd2172596d250fbf0629b883b9cfec2d2fcb080dfe2cd9daa"
+      url "https://github.com/plenoai/pleno-dlp/releases/download/v0.61.0/pleno-dlp_darwin_arm64.tar.gz"
+      sha256 "340972839e2cd7d3a33a0b2a7ec1ab6323c1bb070cc52f1c994760e0a9d288c3"
 
       define_method(:install) do
         bin.install "pleno-dlp"
@@ -29,15 +29,15 @@ class PlenoDlp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/plenoai/pleno-dlp/releases/download/v0.60.0/pleno-dlp_linux_amd64.tar.gz"
-      sha256 "8e5bcb3e31976fa8b37a8ba2f61c604f136be38549dd50820bcbcfc8c578576e"
+      url "https://github.com/plenoai/pleno-dlp/releases/download/v0.61.0/pleno-dlp_linux_amd64.tar.gz"
+      sha256 "00987ebafe6548d536862cf6808288e0299b422bfa817901e5c45a947d2404a6"
       define_method(:install) do
         bin.install "pleno-dlp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/plenoai/pleno-dlp/releases/download/v0.60.0/pleno-dlp_linux_arm64.tar.gz"
-      sha256 "9f032ff2678e45f941d7449e1afa38a4a5d3e0d4fc79414665ee788b0b9b10fc"
+      url "https://github.com/plenoai/pleno-dlp/releases/download/v0.61.0/pleno-dlp_linux_arm64.tar.gz"
+      sha256 "9abdd43933ba6ed325954de49a635117847f4a0204f4ed5d9eb7d9a982f863d6"
       define_method(:install) do
         bin.install "pleno-dlp"
       end
